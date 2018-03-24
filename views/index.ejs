@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>Baseline</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="indexBody">
+<div class="container">
+
+    <div class="jumbotron">
+      <div id = "display"></div>
+      	<p>Insert Coin:</p>
+      	<button class="coin" value="3">Nickel</button>
+      	<button class="coin" value="1" onclick="coinInsert(this.value)">Dime</button>
+      	<button class="coin" value="4" onclick="coinInsert(this.value)">Quarter</button>
+        <button class="coin" value="8" onclick="coinInsert(this.value)">Dollar</button>
+
+      	<p>Select Product:</p>
+      	<button class="product" onclick="buyItem(kombucha)">kombucha $3.50</button>
+      	<button class="product" onclick="buyItem(chips)">Chips $1.50</button>
+      	<button class="product" onclick="buyItem(candy)">Candy $1.00</button>
+
+      	<p>Coin Return:</p>
+      	<button id = "returnCoins"  onclick="makeChange()">Return Coins</button>
+      	<div id = "coinReturn"></div>
+      	<button id="coinReturnButton" onclick="collectCoins()">Collect Coins</button>
+
+      	<p>Item Slot:</p>
+      	<div id = "itemSlot"></div>
+      	<button id="itemSlotButton" onclick="collectItem()">Collect Item</button>
+
+      	<div id = "machineBank"></div>
+      	<div id = "stockDisplay"></div>
+
+      	<label for="lowChange">Low on Change: </label>
+      	<input type="checkbox" onclick="lowCoinCheck()">
+
+
+
+  </div>
+  <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Admin</a>
+</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
